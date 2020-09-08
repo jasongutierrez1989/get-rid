@@ -5,11 +5,13 @@ import {
   Route
 } from 'react-router-dom';
 import Home from './components/Home';
+import Navbar from './components/Navbar';
 
 const App = (props) => {
   return (
         <Router>
           <div>
+           <Navbar />
             <Route exact path="/" component={Home} />
           </div>
         </Router>
