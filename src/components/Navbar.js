@@ -18,6 +18,13 @@ const Navbar = () => {
           color: 'black'
         }}
       >About</NavLink>
+      <NavLink
+        to="/sellers"
+        exact
+        activeStyle={{
+          color: 'black'
+        }}
+      >Sellers</NavLink>
     </div>
   );
 };
