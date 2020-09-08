@@ -1,3 +1,6 @@
-class API::SellersController < ApplicationsController
-
+class Api::SellersController < ApplicationController
+  def index
+    sellers = Seller.all
+    render json: sellers
+  end
 end

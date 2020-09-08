@@ -1,3 +1,3 @@
-class API::PostsController < ApplicationsController
-
+class Api::PostsController < ApplicationController
+  
 end
