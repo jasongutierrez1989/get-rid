@@ -9,7 +9,7 @@ const setSellers = sellers => {
   }
 }
 
-export const getSellers = (state = [],  action) => {
+export const getSellers = () => {
   return dispatch => {
     return fetch(`${API_URL}/sellers`)
       .then(response => response.json())
@@ -21,7 +21,7 @@ export const getSellers = (state = [],  action) => {
 const addSeller = seller => {
   return {
     type: 'CREATE_SELLER_SUCCESS',
-    supplier: Object.assign({}, seller)
+    seller: Object.assign({}, seller)
   }
 }
 

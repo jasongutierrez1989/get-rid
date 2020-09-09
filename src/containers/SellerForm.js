@@ -25,7 +25,7 @@ class SellerForm extends Component {
 
     return (
       <div className="form">
-        <h3 className="form-intro">Are you a seller? Are you new to Ugly Delicious?
+        <h3 className="form-intro">
         <br/>
         <br/>
         Welcome! Sign up here:</h3>
@@ -45,7 +45,7 @@ class SellerForm extends Component {
             <input
               type="text"
               onChange={this.handleOnChange}
-              name="location"
+              name="email"
               value={email}
             />
           </div>

@@ -5,12 +5,15 @@ import {
 } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension'
 import thunk from 'redux-thunk';
-import sellersReducer from './reducers/sellers';
 
+import sellers from './reducers/sellers';
+import posts from './reducers/post';
 import sellerFormData from './reducers/sellerFormData';
+
 const reducers = combineReducers({
-  sellersReducer,
-  sellerFormData
+  sellers,
+  sellerFormData,
+  posts
 });
 
 const middleware = [thunk];

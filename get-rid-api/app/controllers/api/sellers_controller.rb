@@ -5,11 +5,16 @@ class Api::SellersController < ApplicationController
   end
 
   def create
-    supplier = Supplier.new(supplier_params)
-    if supplier.save
-      render json: supplier
+    seller = Seller.new(seller_params)
+    if seller.save
+      render json: seller
     else
-      render json: { message: supplier.errors }, status: 400
+      render json: { message: seller.errors }, status: 400
     end
+  end
+
+  private
+  def seller_params
+    params.fetch(:seller, {}).permit(:name, :location, :email)
   end
 end

@@ -11,7 +11,7 @@ class Sellers extends Component {
   }
 
   render() {
-    const {sellers, match} = this.props;
+    const sellers = this.props.sellers;
     return(
       <div className="seller-page">
             <div className="seller-info">
@@ -26,10 +26,8 @@ class Sellers extends Component {
               <h3 className="seller-instructions">Click on a Seller items for sale!</h3>
 
               <div className="seller-section">
-              <h3 className="seller-instructions">Click on a seller to see their available inventory.</h3>
-
-                {(sellers || []).map(seller => <SellerInfo key={seller.id} seller={seller} />)}
-                <button onClick={() => console.log(this.props)}>Test</button>
+              <h3 className="seller-instructions">Check out all of these sellers!</h3>
+              {(sellers || []).map(seller => <SellerInfo key={seller.id} seller={seller} />)}
             </div>
             <div className="show-seller" id="show-seller">
               {this.props.children}
@@ -41,7 +39,6 @@ class Sellers extends Component {
 };
 
 const mapStateToProps = (state) => {
-  console.log(state.sellers)
   return ({
     sellers: state.sellers
   })
