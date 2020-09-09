@@ -5,7 +5,7 @@ function sellersReducer (state = [], action) {
       return action.sellers;
 
     case 'CREATE_SELLER_SUCCESS':
-      return state(action.sellers);
+      return action.sellers;
 
     default:
       return state;

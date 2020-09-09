@@ -8,6 +8,7 @@ import Home from './components/Home';
 import Navbar from './components/Navbar';
 import About from './components/About';
 import Sellers from './containers/Sellers';
+import SellerForm from './containers/SellerForm';
 
 const App = (props) => {
   return (
@@ -16,7 +17,8 @@ const App = (props) => {
            <Navbar />
             <Route exact path="/" component={Home} />
             <Route exact path="/about" component={About} />
-            <Route exact path="/sellers" component={Sellers} />
+            <Route exact path="/providers" component={Sellers} />
+            <Route exact path="/signup" component={SellerForm} />
           </div>
         </Router>
       );

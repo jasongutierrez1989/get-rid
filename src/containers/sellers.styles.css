@@ -1,0 +1,19 @@
+.seller-info {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.seller-instructions {
+  text-align: center;
+}
+
+.sellers-list {
+  width: 85vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}

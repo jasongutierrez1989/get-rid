@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import { updateSellerFormData } from '../actions/sellerForm';
 import { createSeller } from '../actions/sellers';
+import './sellerForm.styles.css';
 
 class SellerForm extends Component {
 
@@ -25,10 +26,10 @@ class SellerForm extends Component {
 
     return (
       <div className="form">
-        <h3 className="form-intro">
-        <br/>
-        <br/>
-        Welcome! Sign up here:</h3>
+        <div className="form-intro">
+        <h1>Welcome, Sign up here:</h1>
+      </div>
+      <div className="form-form"></div>
         <form onSubmit={this.handleOnSubmit}>
           <fieldset>
           <div>
@@ -62,7 +63,7 @@ class SellerForm extends Component {
           <button type="submit">Sign up</button>
         </fieldset>
         </form>
-      </div>
+        </div>
     )
   }
 }
